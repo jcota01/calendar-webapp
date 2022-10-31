@@ -1,0 +1,114 @@
+
+.previous{
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.next{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.previous, .next{
+    cursor: pointer;
+}
+
+.previous .icon{
+    transform: scale(-0.9);
+}
+
+.previous:hover .box, .next:hover .box{
+    background: rgba(0,0,0,0.7);
+}
+
+.previous:hover .arrow, .next:hover .arrow{
+    margin-left: 10px;
+}
+
+.previous .box,
+.next .box{
+    height: 80px!important;
+    border-radius: 50px;
+    max-width: 170px;
+    max-height: 80px;
+    margin: 0 auto;
+}
+
+#calendar{
+    height: 700px;
+}
+
+#calendar > div{
+    height: 80vh;
+}
+
+#calendar-top{
+    height: 10%;
+}
+
+#calendar-bottom{
+    height: 90%;
+    margin-top: 5px;
+}
+
+#calendar-top > div,
+#calendar-bottom > div{
+    width: 100%;
+    height: 100%;
+}
+
+#month-name-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#month-name-box >*{
+    color: #727272;
+}
+
+table {
+    width: 90%;
+    height: 100%;
+    color: black;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+th, td{
+    text-align: center;
+    font-size: 35px;
+    padding: 0;
+    color: #424588;
+}
+th{
+    border-bottom: 2px solid lightgray;
+    color: grey;
+    font-weight: 700;
+}
+
+td{
+    font-weight: 650;
+}
+
+#main-calendar{
+    max-width: 1300px;
+    max-height: 800px;
+    margin: 0 auto;
+}
+
+#calendar-bottom > *{
+    padding-bottom: 20px;
+}
+
+.hover-box{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 128, 0, 0.9);
+    position: absolute;
+}
+
+tbody >tr:hover{
+    background: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}

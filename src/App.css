@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+html{
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(3deg, rgba(36,59,85,1) 0%, rgba(28,44,66,1) 50%, rgba(20,30,48,1) 100%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root{
+  background: linear-gradient(3deg, rgba(36,59,85,1) 0%, rgba(28,44,66,1) 50%, rgba(20,30,48,1) 100%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.fade-enter {
+  transform: translate(0, 0);
+}
+.fade-enter.fade-enter-active {
+    animation-name: moveIn;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1);
+  animation-duration: 1s;
+}
+.fade-exit {
+}
+.fade-exit.fade-exit-active {
+  animation-name: moveOut;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1);
+  animation-duration: 1s;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes moveIn {
+    0% {
+      transform: translate(-100vw);
+    }
+    100%{
+      transform: translate(0, 0);
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes moveOut {
+    0% {
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(100vw, 0);
+    }
+}
+
+.flex{
+                      display: flex;
+    width: 100vw;
+    justify-content: center;
 }
